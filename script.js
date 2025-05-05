@@ -318,9 +318,9 @@ This kind of check helps us avoid runtime errors and keeps the user experience c
 // });
 
 // Step 1: Cache the dropdown and price elements
-const dropdown = document.getElementById("coin-select");
-const priceElement = document.getElementById("price");
-const startButton = document.getElementById("startButton");
+const dropdown = document.getElementById('coin-select');
+const priceElement = document.getElementById('price');
+const startButton = document.getElementById('startButton');
 
 // Step 2: Fetch the price of a coin from CoinGecko API
 async function fetchPrice(coinId) {
@@ -333,25 +333,28 @@ async function fetchPrice(coinId) {
     if (data[coinId] && data[coinId].usd !== undefined) {
       priceElement.textContent = `$${data[coinId].usd}`;
     } else {
-      console.log("Coin data not found in response.");
-      priceElement.textContent = "Error: Price not available";
+      console.log('Coin data not found in response.');
+      priceElement.textContent = 'Error: Price not available';
     }
   } catch (error) {
-    console.error("Fetch error:", error);
-    priceElement.textContent = "Error: Unable to fetch data";
+    console.error('Fetch error:', error);
+    priceElement.textContent = 'Error: Unable to fetch data';
   }
 }
 
 // Step 3: Fetch the price immediately when a coin is selected
-dropdown.addEventListener("change", function () {
+dropdown.addEventListener('change', function () {
   const selectedCoin = dropdown.value;
   fetchPrice(selectedCoin);
 });
 
 // Step 4: Start button functionality (this can be used to trigger repeated checks if needed)
 let priceCheckInterval;
-startButton.addEventListener("click", function () {
-  const selectedCoin = dropdown.value;
-  fetchPrice(selectedCoin); // Initial fetch on button click
-  priceCheckInterval = setInterval(() => fetchPrice(selectedCoin), 30000); // Every 30 seconds
+startButton.addEventListener('click', function () {
+  const userTargetPrice = parseFloat(
+    document.getElementById('targetPriceInput').value
+  );
+  //const selectedCoin = dropdown.value;
+  fetchPrice(userTargetPrice); // Initial fetch on button click
+  priceCheckInterval = setInterval(() => fetchPrice(userTargetPrice), 30000); // Every 30 seconds
 });

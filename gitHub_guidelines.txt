@@ -1,0 +1,86 @@
+✅ Step 1: Make sure you're on the main branch and it's up to date
+bash
+git checkout main
+git pull origin main
+This ensures your new feature branch will start from the latest code.
+
+✅ Step 2: Create and switch to your new branch
+Let's say you're adding user input to track favorite coins. You can name your branch:
+
+bash
+git checkout -b feature/user-favorite-coins
+✅ You’re now working on your new branch.
+
+✅ Step 3: Start working on your changes
+Edit files, add new logic, test things, etc.
+
+✅ Step 4: Add, commit, and push your changes
+When you’re ready:
+
+bash
+git add .
+git commit -m "Add feature: allow users to track favorite coins"
+git push origin feature/user-favorite-coins
+✅ Step 5: Open a Pull Request on GitHub
+You’ll see a prompt or visit:
+https://github.com/mustafavi/crypto-price-alert
+
+Click "Compare & pull request" and submit.
+
+Would you like a suggestion for a simple first feature to build in this new branch?
+
+
+
+===============================###############################################   Once pull request completed you can follow these steps on git bash.
+
+
+ Step-by-step Git Bash Commands
+Switch to main branch (if not already on it):
+
+bash
+git checkout main
+Pull the latest changes from GitHub into your local main branch:
+
+bash
+git pull origin main
+This brings in the merged feature changes from GitHub into your local setup.
+
+(Optional but good habit) Delete the local feature branch:
+
+bash
+git branch -d feature/user-target-price
+(Optional) Delete the feature branch from GitHub:
+You can do this on GitHub from the pull request page (there's a "Delete branch" button after merging), or use Git Bash:
+
+bash
+git push origin --delete feature/user-target-price
+
+
+===============================###############################################   RECAP OF BRANCHING AND UPLOADING ON GITHUB
+
+Here's a Quick Recap of What a Typical Code Change Workflow Should Look Like
+Let's say you want to change one line of code. Here's the ideal, efficient path:
+
+Create a new branch (optional but recommended for features/fixes):
+
+bash
+git checkout -b feature/your-change
+Make your code change (e.g., edit index.html).
+
+Stage and commit your changes:
+
+bash
+git add index.html
+git commit -m "Update title in index.html"
+Push your branch to GitHub:
+
+bash
+git push origin feature/your-change
+Create a Pull Request (on GitHub), review the changes, and merge to main.
+
+Pull latest changes in your local main:
+
+bash
+git checkout main
+git pull origin main
+Your site auto-deploys via Netlify (if connected to GitHub’s main).

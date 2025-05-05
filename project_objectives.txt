@@ -1,0 +1,11 @@
+✅ 3. Break Long Conversations into Topics
+If you’re working on:
+
+GitHub
+
+Backend logic
+
+Frontend layout
+
+Deployment
+Try focusing on one at a time in separate sessions or chats.
