@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Price Alert</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Crypto Price Alert</h2>
+      <!-- <input type="text" id="coin" placeholder="Enter coin (e.g. BTC)" /> -->
+      <select id="coin-select">
+        <option value="bitcoin">Bitcoin (BTC)</option>
+        <option value="ethereum">Ethereum (ETH)</option>
+        <!-- <option value="binance-peg-xrp">XRP</option> -->
+        <option value="ripple">XRP</option>
+        <option value="solana">Solana (SOL)</option>
+        <option value="cardano">Cardano (ADA)</option>
+        <option value="dogecoin">Dogecoin (DOGE)</option>
+      </select>
+      <input
+        type="name"
+        id="targetPrice"
+        placeholder="Target price (e.g.
+      100000)"
+      />
+      <button onclick="startAlert()">Start Monitoring</button>
+      <p id="status"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
