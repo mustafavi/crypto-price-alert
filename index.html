@@ -6,13 +6,13 @@
     <title>Crypto Price Alert</title>
   </head>
   <body>
-    <div class="container">
+    <!-- <div class="container">
       <h2>Crypto Price Alert</h2>
-      <!-- <input type="text" id="coin" placeholder="Enter coin (e.g. BTC)" /> -->
+
       <select id="coin-select">
         <option value="bitcoin">Bitcoin (BTC)</option>
         <option value="ethereum">Ethereum (ETH)</option>
-        <!-- <option value="binance-peg-xrp">XRP</option> -->
+
         <option value="ripple">XRP</option>
         <option value="solana">Solana (SOL)</option>
         <option value="cardano">Cardano (ADA)</option>
@@ -26,7 +26,21 @@
       />
       <button onclick="startAlert()">Start Monitoring</button>
       <p id="status"></p>
-    </div>
+    </div> -->
+
+    <h1>Crypto Price Alert</h1>
+
+    <!-- Dropdown to select a coin -->
+    <label for="coin-select">Select Coin:</label>
+    <select id="coin-select">
+      <option value="ripple">XRP</option>
+      <option value="bitcoin">BTC</option>
+      <option value="ethereum">ETH</option>
+    </select>
+
+    <p>Current Price: <span id="price">--</span></p>
+
+    <button id="startButton">Start</button>
     <script src="./script.js"></script>
   </body>
 </html>
